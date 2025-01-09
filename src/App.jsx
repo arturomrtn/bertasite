@@ -1,14 +1,12 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbarr from './components/Navbarr';
+import React from "react";
+import Hero from "./components/Hero";
 
 function App() {
-
   return (
-    <><Navbarr /><div className="App">
-      <h1>Soy un componente!</h1>
-    </div></>
-
-  )
+    <div>
+      <Hero />
+    </div>
+  );
 }
 
-export default App
+export default App;
