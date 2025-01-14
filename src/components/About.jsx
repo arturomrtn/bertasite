@@ -6,7 +6,7 @@ const AboutUs = () => {
       className="min-h-screen bg-gray-100 text-gray-800 flex justify-center items-center p-8"
     >
       <div className="text-center max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Us</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6">About us</h2>
         <p className="text-lg sm:text-xl leading-relaxed mb-6">
           We are a clothing store that specializes in trendy and timeless
           fashion. Our goal is to provide our customers with the best quality

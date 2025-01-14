@@ -1,11 +1,19 @@
-import allImages from "../data/images";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import useRandomImages from "../hooks/useRandomImages";
 import ImageGrid from "../components/ImageGrind";
+import allImages from "../data/images";
 
 const Home = () => {
+  const location = useLocation();
+  const { randomImages, refreshImages } = useRandomImages(allImages);
 
-  const randomImages = useRandomImages(allImages);
-  
+  useEffect(() => {
+    if (location.pathname === "/") {
+      refreshImages();
+    }
+  }, [location, refreshImages]);
+
   return (
     <section
       id="home"
@@ -14,9 +22,10 @@ const Home = () => {
       <h1 className="text-4xl sm:text-5xl font-extrabold mb-8">
         Welcome to Berta Store
       </h1>
-      <ImageGrid images={randomImages} />
+      <ImageGrid images={randomImages} key={randomImages.map((img) => img).join("")} />
     </section>
   );
 };
 
 export default Home;
+
