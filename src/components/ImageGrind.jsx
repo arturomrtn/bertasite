@@ -10,6 +10,7 @@ const ImageGrid = ({ images }) => {
           src={image}
           alt={`Clothing ${index + 1}`}
           className="h-60 w-full object-cover rounded-xl shadow-lg"
+          whileHover={{ scale: 1.1, boxShadow: "0px 10px 30px rgba(0,0,0,0.3)" }}
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: index * 0.2 }}

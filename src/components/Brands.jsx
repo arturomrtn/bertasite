@@ -4,3 +4,5 @@ const Brands = () => {
        <h1>Our brands</h1>
     )
 }
+
+export default Brands;
